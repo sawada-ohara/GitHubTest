@@ -8,7 +8,7 @@
 
 using namespace Sawada;
 
-
+// コメント追加
 int main()
 {
     Person* p = new Person;
