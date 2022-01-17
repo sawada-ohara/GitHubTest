@@ -1,11 +1,30 @@
 ﻿// GitHubTest.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
+#include "person.h"
+
 #include <iostream>
+#include <assert.h>
+
+using namespace Sawada;
+
 
 int main()
 {
+    Person* p = new Person;
+    assert(p != nullptr);
+
     std::cout << "Hello World!\n";
+
+    p->SetAge(46);
+    p->SetName("Shinji Sawada");
+
+    p->Print();
+
+    delete p;
+    p = nullptr;
+
+    return 0;
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
